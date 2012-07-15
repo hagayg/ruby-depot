@@ -13,3 +13,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore Rubymine project files
+.idea/vcs.xml
+.idea/workspace.xml
