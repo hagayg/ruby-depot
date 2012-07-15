@@ -28,7 +28,9 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @product }
+      format.json {
+        render json: @product
+      }
     end
   end
 
@@ -80,4 +82,6 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 end
