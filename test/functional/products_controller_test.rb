@@ -54,4 +54,11 @@ class ProductsControllerTest < ActionController::TestCase
 
     assert_redirected_to products_path
   end
+
+  test "should be more than 4 items" do
+    get :index
+    assert_response :success
+    assert_select '#main .list_line_odd', minimum: 2
+    assert_select '#main .list_line_even', minimum: 1
+  end
 end
