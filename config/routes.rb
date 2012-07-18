@@ -1,5 +1,11 @@
 Depot::Application.routes.draw do
+  resources :line_items
+
+  resources :carts
+
   get "store/index"
+
+  get "store/on_add_to_cart"
 
   resources :products
 

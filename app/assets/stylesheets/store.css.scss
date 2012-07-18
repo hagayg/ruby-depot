@@ -7,7 +7,7 @@
   h1 {
     margin: 0;
     padding-bottom: 0.5em;
-    font:  150% sans-serif;
+    font: 150% sans-serif;
     color: #226;
     border-bottom: 3px dotted #77d;
   }
@@ -41,6 +41,18 @@
       margin-bottom: 0.8em;
     }
 
+    //#START:inline
+    p, div.price_line {
+      margin-left: 100px;
+      margin-top: 0.5em;
+      margin-bottom: 0.8em;
+
+      form, div {
+        display: inline;
+      }
+    }
+    //#END:inline
+
     .price {
       color: #44a;
       font-weight: bold;
@@ -48,4 +60,5 @@
     }
   }
 }
+
 /* END_HIGHLIGHT */
