@@ -13,5 +13,6 @@ class StoreController < ApplicationController
   def on_add_to_cart
     session[:counter] = 0
     redirect_to current_cart
+    #redirect_to line_items_path(params[:product_id])
   end
 end

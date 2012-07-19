@@ -1,8 +1,9 @@
+
 <% if notice %>
     <p id="notice"><%= notice %></p>
 <% end %>
 
-<h1>Your Pragmatic Catalog  (<b> <%= pluralize(session[:counter], 'count') %> </b>)</h1>
+<h1>Your Pragmatic Catalog</h1>
 
 <% @products.each do |product| %>
     <div class="entry">
@@ -13,10 +14,11 @@
         <!-- START:currency -->
         <span class="price"><%= number_to_currency(product.price) %></span>
         <!-- START_HIGHLIGHT -->
-        <%= button_to 'Add to Cart', { :action => :on_add_to_cart}, { :method => :get , :product_id => product } %>
+        <%= button_to 'Add to Cart', line_items_path(product_id: product) %>
+        <!--<%= button_to 'Add to Cart', { :action => :on_add_to_cart }, { :method => :get , :product_id => product } %>-->
+
         <!-- END_HIGHLIGHT -->
         <!-- END:currency -->
       </div>
     </div>
-
 <% end %>
