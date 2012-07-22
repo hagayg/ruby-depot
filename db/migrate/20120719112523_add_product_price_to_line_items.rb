@@ -8,4 +8,8 @@ class AddProductPriceToLineItems < ActiveRecord::Migration
     end
 
   end
+
+  def down
+    remove_column :line_items, :product_price
+  end
 end

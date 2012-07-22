@@ -26,6 +26,15 @@
   img {
     float: left;
   }
+
+  #login {
+    padding: 10px;
+    border-bottom: 0px solid;
+    font: 15px/15px "Times New Roman", serif;
+    color: #000000;
+    display: inline;
+    float: right;
+  }
 }
 
 #notice {
@@ -63,7 +72,9 @@
           font-size: small;
         }
       }
-      #mytime { color: white }
+      #mytime {
+        color: white
+      }
     }
   }
 }

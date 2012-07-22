@@ -18,4 +18,8 @@ class ApplicationController < ActionController::Base
     session[:cart_id] = cart.id
     cart
   end
+
+  def not_authenticated
+    redirect_to login_url, :alert => "First login to access this page."
+  end
 end
